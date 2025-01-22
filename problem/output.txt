@@ -1,0 +1,12 @@
+1. Design Plan: How would the design be created and what all does the engineer / engineering team need to do to design and manufacture the required part(s).
+2. Requirements table: Aka a list of requirements elucidated individually in a tabular format
+3. Create Automatable CAD Scripts: Develop at least three distinct baseplate designs using a 3D CAD software package (SolidWorks, Autodesk, Fusion 360, Openscad, Freecad, Onshape).
+4. Analysis: 
+4.1. Propose the material selected
+4.2. Conduct structural analysis for each design and provide a report summarizing the results, including stress calculations, deflection analysis, and safety factor verification.
+4.3. Conduct Safety and Failure Analysis
+4.4. Propose the relevant applicable standards
+5. Test Plan(s) and Test case generation to evaluate the proposed design(s).
+6. Manufacturing process recommendation (e.g. 3D printing or CNC or molding etc?)
+7. Design Justification Report: Provide a comprehensive report justifying the design choices for each concept, including material selection, connection method, and design features. Compare and contrast the different designs, highlighting their advantages and disadvantages.
+8. Presentation: Present and email the design report to the team, showcasing the different concepts, analysis results, and design justification.

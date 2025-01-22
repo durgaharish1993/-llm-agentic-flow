@@ -1,0 +1,227 @@
+{"baseplate_design_combinations": [
+    {
+      "software_used": "SolidWorks",
+      "design_id": "D001",
+      "name": "Rectangular Baseplate with Reinforced Corners",
+      "parameters": {
+        "length": 200,
+        "width": 150,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes positioned 20 mm from each edge.",
+        "corner_reinforcement": "Reinforced corners with fillets or ribs.",
+        "material": ["Steel", "Aluminum"],
+        "shape": "Rectangular",
+        "safety_features": "Rounded corners to minimize injury risk."
+      },
+      "code_snippet": "Create a 200mm x 150mm rectangle. Extrude to 8mm thickness. Use 'Circle' tool to create 4 holes (M10, 20mm offset). Apply fillets on corners."
+    },
+    {
+      "software_used": "SolidWorks",
+      "design_id": "D002",
+      "name": "Circular Baseplate with Mounting Holes",
+      "parameters": {
+        "diameter": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes placed symmetrically on the plate.",
+        "shape": "Circular",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Rounded edges to reduce injury risk."
+      },
+      "code_snippet": "Create a circle with a 200mm diameter, extrude it to 8mm. Use the 'Hole Wizard' to place 4 M10 mounting holes at a 20mm offset."
+    },
+    {
+      "software_used": "SolidWorks",
+      "design_id": "D003",
+      "name": "Square Baseplate with Symmetric Mounting Holes",
+      "parameters": {
+        "side_length": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes symmetrically placed.",
+        "shape": "Square",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Chamfered edges for added safety."
+      },
+      "code_snippet": "Create a square (200mm x 200mm), extrude 8mm. Use the Hole Wizard to place 4 M10 holes, with a 20mm offset. Apply chamfer to edges."
+    },
+    {
+      "software_used": "Fusion 360",
+      "design_id": "D001",
+      "name": "Rectangular Baseplate with Reinforced Corners",
+      "parameters": {
+        "length": 200,
+        "width": 150,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes positioned 20 mm from each edge.",
+        "corner_reinforcement": "Reinforced corners with fillets or ribs.",
+        "material": ["Steel", "Aluminum"],
+        "shape": "Rectangular",
+        "safety_features": "Rounded corners to minimize injury risk."
+      },
+      "code_snippet": "Create a 200mm x 150mm rectangular sketch, extrude to 8mm. Use 'Hole' feature to create 4 M10 mounting holes. Apply fillets on corners."
+    },
+    {
+      "software_used": "Fusion 360",
+      "design_id": "D002",
+      "name": "Circular Baseplate with Mounting Holes",
+      "parameters": {
+        "diameter": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes placed symmetrically on the plate.",
+        "shape": "Circular",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Rounded edges to reduce injury risk."
+      },
+      "code_snippet": "Create a circle with 200mm diameter, extrude 8mm. Use the 'Hole' feature to create 4 M10 holes, each 20mm offset from the center."
+    },
+    {
+      "software_used": "Fusion 360",
+      "design_id": "D003",
+      "name": "Square Baseplate with Symmetric Mounting Holes",
+      "parameters": {
+        "side_length": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes symmetrically placed.",
+        "shape": "Square",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Chamfered edges for added safety."
+      },
+      "code_snippet": "Create a square (200mm x 200mm), extrude 8mm. Use the 'Hole' feature to place 4 M10 holes with a 20mm offset. Apply chamfers to edges."
+    },
+    {
+      "software_used": "OpenSCAD",
+      "design_id": "D001",
+      "name": "Rectangular Baseplate with Reinforced Corners",
+      "parameters": {
+        "length": 200,
+        "width": 150,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes positioned 20 mm from each edge.",
+        "corner_reinforcement": "Reinforced corners with fillets or ribs.",
+        "material": ["Steel", "Aluminum"],
+        "shape": "Rectangular",
+        "safety_features": "Rounded corners to minimize injury risk."
+      },
+      "code_snippet": "difference() {\n    cube([200, 150, 8]);\n    for (x = [20, 200 - 20]) {\n        for (y = [20, 150 - 20]) {\n            translate([x, y, 0])\n                cylinder(h = 10, d = 10);\n        }\n    }\n    translate([0, 0, -1]) {\n        for (x = [0, 200]) {\n            for (y = [0, 150]) {\n                translate([x, y, 0])\n                    cylinder(h = 8 + 2, d = 10);\n            }\n        }\n    }\n}"
+    },
+    {
+      "software_used": "OpenSCAD",
+      "design_id": "D002",
+      "name": "Circular Baseplate with Mounting Holes",
+      "parameters": {
+        "diameter": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes placed symmetrically on the plate.",
+        "shape": "Circular",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Rounded edges to reduce injury risk."
+      },
+      "code_snippet": "difference() {\n    cylinder(h = 8, d = 200);\n    for (x = [20, 180]) {\n        for (y = [20, 180]) {\n            translate([x, y, 0])\n                cylinder(h = 10, d = 10);\n        }\n    }\n}"
+    },
+    {
+      "software_used": "OpenSCAD",
+      "design_id": "D003",
+      "name": "Square Baseplate with Symmetric Mounting Holes",
+      "parameters": {
+        "side_length": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes symmetrically placed.",
+        "shape": "Square",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Chamfered edges for added safety."
+      },
+      "code_snippet": "difference() {\n    cube([200, 200, 8]);\n    for (x = [20, 180]) {\n        for (y = [20, 180]) {\n            translate([x, y, 0])\n                cylinder(h = 10, d = 10);\n        }\n    }\n    // Chamfered edges\n    translate([0, 0, -1]) {\n        for (x = [0, 200]) {\n            for (y = [0, 200]) {\n                translate([x, y, 0])\n                    cylinder(h = 8 + 2, d = 10);\n            }\n        }\n    }\n}"
+    },
+    {
+      "software_used": "FreeCAD",
+      "design_id": "D001",
+      "name": "Rectangular Baseplate with Reinforced Corners",
+      "parameters": {
+        "length": 200,
+        "width": 150,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes positioned 20 mm from each edge.",
+        "corner_reinforcement": "Reinforced corners with fillets or ribs.",
+        "material": ["Steel", "Aluminum"],
+        "shape": "Rectangular",
+        "safety_features": "Rounded corners to minimize injury risk."
+      },
+      "code_snippet": "import FreeCAD, Part\nplate = Part.makeBox(200, 150, 8)\nfor x in [20, 180]:\n    for y in [20, 130]:\n        hole = Part.makeCylinder(10/2, 8)\n        hole.translate(FreeCAD.Vector(x, y, 0))\ndoc.addObject('Part::Feature', 'BasePlate').Shape = plate"
+    },
+    {
+      "software_used": "FreeCAD",
+      "design_id": "D002",
+      "name": "Circular Baseplate with Mounting Holes",
+      "parameters": {
+        "diameter": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes placed symmetrically on the plate.",
+        "shape": "Circular",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Rounded edges to reduce injury risk."
+      },
+      "code_snippet": "import FreeCAD, Part\nplate = Part.makeCylinder(200/2, 8)\nfor x in [20, 180]:\n    for y in [20, 180]:\n        hole = Part.makeCylinder(10/2, 8)\n        hole.translate(FreeCAD.Vector(x, y, 0))\ndoc.addObject('Part::Feature', 'BasePlate').Shape = plate"
+    },
+    {
+      "software_used": "FreeCAD",
+      "design_id": "D003",
+      "name": "Square Baseplate with Symmetric Mounting Holes",
+      "parameters": {
+        "side_length": 200,
+        "thickness": 8,
+        "hole_diameter": 10,
+        "hole_offset": 20
+      },
+      "features": {
+        "mounting_holes": "Four M10 holes symmetrically placed.",
+        "shape": "Square",
+        "material": ["Steel", "Aluminum"],
+        "safety_features": "Chamfered edges for added safety."
+      },
+      "code_snippet": "import FreeCAD, Part\nplate = Part.makeBox(200, 200, 8)\nfor x in [20, 180]:\n    for y in [20, 180]:\n        hole = Part.makeCylinder(10/2, 8)\n        hole.translate(FreeCAD.Vector(x, y, 0))\ndoc.addObject('Part::Feature', 'BasePlate').Shape = plate"
+    }
+  ]
+}

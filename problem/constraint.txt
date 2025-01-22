@@ -1,0 +1,21 @@
+1. Load Capacity
+Primary Vertical Load: 3,000 N (≈ 300 kg mass-equivalent)
+Lateral (Horizontal) Load: 300 N (to simulate minor side loads/wind or a person leaning).
+The baseplate must safely carry these loads concurrently with Factor of Safety (FOS) ≥ 2.
+2. Dimensions & Mounting
+Maximum Plate Footprint: 200 mm × 200 mm (students can design a shape within this envelope—square, rectangular, circular, etc.).
+Plate Thickness: Up to 10 mm max (to control weight and material usage).
+The baseplate must have four (4) mounting holes to accommodate M10 bolts (or equivalent fasteners).
+Mounting hole pattern (i.e., center-to-center spacing) should fit within the 200×200 mm footprint and be arranged to ensure stability.
+3. Deflection Constraint : 
+Under the maximum expected load (vertical + lateral), the top surface of the baseplate should not deflect more than 0.5 mm at the center or post location.
+4. Weight & Cost : 
+The baseplate should weigh no more than 3 kg to simplify handling.
+Aim for an estimated material cost ≤ $20 in moderate production volumes.
+5. Manufacturability : 
+Design the plate so it can be easily fabricated using standard sheet metal or plate processes (laser cutting, waterjet cutting, drilling, etc.).
+Keep geometry straightforward to minimize complexity in machining or cutting.
+6. Safety & Installation : 
+No sharp edges; corners should be rounded or chamfered to reduce injury risk.
+Ensure bolt holes are robust enough (i.e., enough edge distance) to avoid tearing out under load.
+Include at least one mounting reference (e.g., a center hole or a marked reference) to help position the column or post consistently.

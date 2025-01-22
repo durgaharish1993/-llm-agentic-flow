@@ -1,0 +1,287 @@
+{
+    "design_planning": {
+      "tasks": [
+        {
+          "task_id": "T001",
+          "title": "Understand the Requirements",
+          "description": "Understand the key functional, dimensional, and manufacturing requirements of the hardware product.",
+          "sub_tasks": [
+            {
+              "sub_task_id": "T001-S1",
+              "title": "Review Load Capacity Requirements",
+              "description": "Analyze the vertical load (3000 N) and lateral load (300 N) specifications.",
+              "actions": [
+                "Calculate load distribution across the baseplate.",
+                "Determine stress factors for vertical and lateral loads.",
+                "Ensure the Factor of Safety (FOS) is ≥ 2 (double the maximum load)."
+              ],
+              "acceptance_criteria": [
+                "Load distribution calculations are completed accurately.",
+                "Factor of Safety is ≥ 2.",
+                "Stress analysis confirms that the design can handle the specified loads."
+              ]
+            },
+            {
+              "sub_task_id": "T001-S2",
+              "title": "Confirm Dimensional Constraints",
+              "description": "Review the maximum footprint and plate thickness constraints.",
+              "actions": [
+                "Verify the baseplate footprint is ≤ 200 mm × 200 mm.",
+                "Decide on the most efficient shape: square, rectangular, or circular.",
+                "Ensure plate thickness ≤ 10 mm to meet weight and material requirements."
+              ],
+              "acceptance_criteria": [
+                "Plate footprint is within the 200 mm × 200 mm envelope.",
+                "Shape choice fits functional and aesthetic requirements.",
+                "Thickness is ≤ 10 mm and meets weight specifications."
+              ]
+            },
+            {
+              "sub_task_id": "T001-S3",
+              "title": "Review Mounting Hole Requirements",
+              "description": "Confirm the requirements for the mounting holes.",
+              "actions": [
+                "Ensure there are 4 mounting holes for M10 bolts.",
+                "Calculate the edge distance (≥ 20 mm for M10 bolts) to avoid tearing the material.",
+                "Ensure hole placement maintains plate stability under load."
+              ],
+              "acceptance_criteria": [
+                "4 mounting holes are present and correctly positioned.",
+                "Edge distance for M10 bolts is ≥ 20 mm.",
+                "Hole alignment ensures stability under load."
+              ]
+            },
+            {
+              "sub_task_id": "T001-S4",
+              "title": "Review Deflection Constraints",
+              "description": "Ensure that the baseplate design meets the deflection constraint.",
+              "actions": [
+                "Verify that the deflection at the center of the plate is ≤ 0.5 mm under full load."
+              ],
+              "acceptance_criteria": [
+                "Deflection is verified through FEA or physical testing and is ≤ 0.5 mm."
+              ]
+            },
+            {
+              "sub_task_id": "T001-S5",
+              "title": "Confirm Weight and Cost Constraints",
+              "description": "Review the weight and cost limits of the baseplate.",
+              "actions": [
+                "Ensure the weight does not exceed 3 kg.",
+                "Target material cost ≤ $20 to meet production and budget constraints."
+              ],
+              "acceptance_criteria": [
+                "Weight of the final baseplate is ≤ 3 kg.",
+                "Material cost estimation is ≤ $20 for moderate production volumes."
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "T002",
+          "title": "Conceptual Design",
+          "description": "Begin conceptualizing the shape, material, and basic features based on the requirements.",
+          "sub_tasks": [
+            {
+              "sub_task_id": "T002-S1",
+              "title": "Material Selection",
+              "description": "Select materials that balance strength, weight, and cost.",
+              "actions": [
+                "Choose **steel** for strength or **aluminum** for weight reduction, based on structural and cost requirements.",
+                "Check material strength, density, and cost for steel and aluminum.",
+                "Estimate material cost based on size and thickness."
+              ],
+              "acceptance_criteria": [
+                "Material selection meets both the strength and cost requirements.",
+                "Material cost is calculated and falls within the specified budget."
+              ]
+            },
+            {
+              "sub_task_id": "T002-S2",
+              "title": "Choose Plate Shape",
+              "description": "Select an efficient shape for the baseplate within the given dimensional constraints.",
+              "actions": [
+                "Design a square, rectangular, or circular shape.",
+                "Ensure the shape fits the 200 mm × 200 mm envelope without wasting material.",
+                "Account for structural integrity and ease of fabrication."
+              ],
+              "acceptance_criteria": [
+                "The selected shape is within the 200 mm × 200 mm dimensional constraints.",
+                "The shape is optimal for load-bearing capacity and material use."
+              ]
+            },
+            {
+              "sub_task_id": "T002-S3",
+              "title": "Mounting Hole Pattern Design",
+              "description": "Design the hole placement and pattern to ensure stability and easy mounting.",
+              "actions": [
+                "Place 4 mounting holes near the corners to balance load distribution.",
+                "Ensure holes are centered and maintain edge distance of ≥ 20 mm.",
+                "Ensure hole diameter fits M10 bolts with necessary tolerance."
+              ],
+              "acceptance_criteria": [
+                "Hole pattern is symmetrical and placed near the corners for optimal load distribution.",
+                "Edge distance for mounting holes is ≥ 20 mm, ensuring robust attachment points.",
+                "Hole diameter and tolerance meet M10 bolt specifications."
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "T003",
+          "title": "Structural Analysis",
+          "description": "Analyze the structure using FEA (Finite Element Analysis) to ensure the product will withstand the specified loads.",
+          "sub_tasks": [
+            {
+              "sub_task_id": "T003-S1",
+              "title": "FEA Simulation for Load Bearing Capacity",
+              "description": "Simulate the load-bearing capacity of the baseplate under vertical and lateral loads.",
+              "actions": [
+                "Use FEA software to apply 3000 N vertical load and 300 N lateral load.",
+                "Analyze stress distribution across the plate and mounting holes.",
+                "Ensure safety factors (FOS ≥ 2) under combined loads."
+              ],
+              "acceptance_criteria": [
+                "FEA results show that the baseplate can handle both vertical and lateral loads.",
+                "Factor of Safety is ≥ 2, ensuring the baseplate will not fail under load."
+              ]
+            },
+            {
+              "sub_task_id": "T003-S2",
+              "title": "Check for Deflection",
+              "description": "Ensure the baseplate does not deflect more than the specified limit.",
+              "actions": [
+                "Check the deflection at the center of the baseplate under full load.",
+                "Ensure deflection is ≤ 0.5 mm at the center or mounting point."
+              ],
+              "acceptance_criteria": [
+                "Deflection at the center under maximum load is ≤ 0.5 mm."
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "T004",
+          "title": "Dimensional Design",
+          "description": "Finalize the dimensions and specifications for the plate thickness, mounting hole size, and location.",
+          "sub_tasks": [
+            {
+              "sub_task_id": "T004-S1",
+              "title": "Confirm Plate Thickness",
+              "description": "Finalize the thickness of the baseplate to balance weight and load capacity.",
+              "actions": [
+                "Ensure the plate thickness is ≤ 10 mm to meet the weight requirement.",
+                "Use FEA results to confirm that the plate thickness can withstand the specified load."
+              ],
+              "acceptance_criteria": [
+                "Plate thickness is ≤ 10 mm.",
+                "FEA confirms the plate thickness provides the necessary load-bearing capacity."
+              ]
+            },
+            {
+              "sub_task_id": "T004-S2",
+              "title": "Finalize Mounting Hole Design",
+              "description": "Ensure the holes are correctly sized and positioned for strength and ease of installation.",
+              "actions": [
+                "Confirm the edge distance for the mounting holes (≥ 20 mm for M10 bolts).",
+                "Double-check the hole diameter and tolerance for M10 bolts."
+              ],
+              "acceptance_criteria": [
+                "Mounting hole diameter and edge distance are correct for M10 bolts.",
+                "Mounting hole locations are verified to maintain stability and load distribution."
+              ]
+            },
+            {
+              "sub_task_id": "T004-S3",
+              "title": "Final Shape Design",
+              "description": "Finalize the overall shape and dimensions of the baseplate.",
+              "actions": [
+                "Ensure the shape fits within the 200 mm × 200 mm footprint.",
+                "Finalize the design to minimize material waste while ensuring strength."
+              ],
+              "acceptance_criteria": [
+                "The shape fits within the dimensional constraints (200 mm × 200 mm).",
+                "Final shape minimizes material waste and meets strength requirements."
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "T005",
+          "title": "Weight and Material Optimization",
+          "description": "Ensure the baseplate weighs ≤ 3 kg and material cost is ≤ $20.",
+          "sub_tasks": [
+            {
+              "sub_task_id": "T005-S1",
+              "title": "Estimate Plate Weight",
+              "description": "Estimate the weight of the plate based on material and dimensions.",
+              "actions": [
+                "Calculate the plate's weight using material density and dimensions.",
+                "Ensure the weight does not exceed 3 kg to meet handling and cost requirements."
+              ],
+              "acceptance_criteria": [
+                "Final weight of the baseplate is ≤ 3 kg."
+              ]
+            },
+            {
+              "sub_task_id": "T005-S2",
+              "title": "Optimize Material Usage",
+              "description": "Reduce material usage while maintaining strength and structural integrity.",
+              "actions": [
+                "Adjust thickness and shape where possible to reduce material waste.",
+                "Use efficient manufacturing methods (laser cutting, CNC) to reduce material waste."
+              ],
+              "acceptance_criteria": [
+                "Material usage is optimized while maintaining the required strength and deflection constraints."
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "T006",
+          "title": "Safety and Compliance Design",
+          "description": "Ensure that the design complies with safety standards and regulations, with features to minimize injury risk.",
+          "sub_tasks": [
+            {
+              "sub_task_id": "T006-S1",
+              "title": "Ensure Rounded or Chamfered Edges",
+              "description": "Design the baseplate to eliminate sharp edges and reduce injury risk.",
+              "actions": [
+                "Round or chamfer all sharp edges to prevent cuts during handling.",
+                "Check edge radii to ensure compliance with safety standards."
+              ],
+              "acceptance_criteria": [
+                "All edges are rounded or chamfered as per safety standards.",
+                "No sharp edges present that could cause injury."
+              ]
+            },
+            {
+              "sub_task_id": "T006-S2",
+              "title": "Verify Robust Mounting Holes",
+              "description": "Ensure that the mounting holes are robust enough to avoid failure under load.",
+              "actions": [
+                "Verify the edge distance (≥ 20 mm for M10 bolts) to prevent tear-out.",
+                "Ensure hole tolerance allows for easy fitting of bolts."
+              ],
+              "acceptance_criteria": [
+                "Edge distance for mounting holes is ≥ 20 mm.",
+                "Bolt fitment is within tolerance and holes are robust."
+              ]
+            },
+            {
+              "sub_task_id": "T006-S3",
+              "title": "Include Mounting Reference",
+              "description": "Provide a reference point to aid installation accuracy.",
+              "actions": [
+                "Include a center hole or marked reference to ensure proper alignment during installation."
+              ],
+              "acceptance_criteria": [
+                "A center hole or marked reference is provided for alignment."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
